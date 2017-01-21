@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mss.encryptor.PreferencesActivity"
+    tools:showIn="@layout/activity_preferences"
+    android:orientation="vertical">
+
+    <Button
+        android:text="Yeni Kullanıcı"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="newUser"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/algorithm_spinner"
+            android:layout_weight=".5"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/keylength_spinner"
+            android:layout_weight=".5"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Şifreleme anahtarı"/>
+
+
+    <RadioGroup
+        android:id="@+id/key_option_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giriş şifresi"
+            android:id="@+id/radioButton"
+            android:layout_weight=".5"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yeni şifre"
+            android:id="@+id/radioButton3"
+            android:layout_weight=".5"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/new_key_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/new_key_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yeni Şifre"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Şifre İpucu"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/new_filename_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yeni Dosya İsmi(Çoklu dosyalarda sonuna sayı eklenir)"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:imeOptions="actionNext"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:text="@string/select_file_save_location_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="chooseDirectory"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dirTextView"/>
+
+    <EditText
+        android:id="@+id/new_user_key"
+        android:hint="Yeni Kullanıcı Şifresi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:text="Varsayılan Ayarları Kaydet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="savePreferences"/>
+
+
+</LinearLayout>

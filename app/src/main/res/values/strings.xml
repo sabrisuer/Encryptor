@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">Encryptor</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Kullanıcı Adı</string>
+    <string name="prompt_password">Şifre</string>
+    <string name="action_sign_in">Kaydet</string>
+    <string name="action_sign_in_short">Giriş Yap</string>
+    <string name="error_invalid_username_reserve">Bu kulanıcı adı uygulamaya ayrılmıştır.</string>
+    <string name="error_invalid_password_reserve">Bu şifre uygulamaya ayrılmıştır.</string>
+    <string name="error_invalid_password">Şifre 16 karakterden kısa olamaz.</string>
+    <string name="error_incorrect_form">Kullanıcı bilgilerinde hata var.</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_login">Kullanıcı Girişi</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="enterUserName">Kullanıcı adınızı giriniz</string>
+    <string name="enterPassword">Şifrenizi giriniz</string>
+    <string name="loginButtonText">Giriş Yap</string>
+    <string name="newUserButtonText">Yeni Kullanıcı</string>
+    <string name="title_activity_main">Encryptor</string>
+
+    <!-- Ana menü -->
+    <string name="file_encrypt_button">Dosya Şifrele</string>
+    <string name="text_encrypt_button">Metin Şifrele</string>
+    <string name="photo_take_encrypt_button">Resim Çek ve Şifrele</string>
+    <string name="video_take_encrypt_button">Video Çek ve Şifrele</string>
+    <string name="list_encrypted_files">Şifreli Dosyaları Listele</string>
+    <string name="preferences">Seçenekler</string>
+    <string name="about">Hakkında</string>
+
+    <!-- Şifreleme -->
+    <string name="back_to_main_menu">Ana Menüye Dön</string>
+
+    <!-- Ayarlar -->
+    <string name="key">Şifreleme anahtarı</string>
+    <string name="new_key">Yeni şifre</string>
+    <string name="last_used_key">Son kullanılan şifre</string>
+    <string name="login_key">Giriş şifresi</string>
+    <string name="hint">Şifre İpucu(Boşluk girmeyin)</string>
+
+    <!-- Dosya şifreleme -->
+    <string name="title_activity_file_encryption">Dosya Şifreleme</string>
+    <string name="select_file_button">Seç</string>
+    <string name="file_encryption_options_button">Ayarlar</string>
+    <string name="key_option">Şifre</string>
+    <string name="select_file_save_location_button">Kaydedilecek Dizin</string>
+    <string name="no_files_selected">Hiç dosya seçilmedi.</string>
+    <string name="first_directory_selected">Ana dizin seçilemez.</string>
+    <string name="encrypt_file_button">Şifrele</string>
+
+    <!-- Şifrelenecek dosya seçimi -->
+    <string name="title_activity_file_list">Şifrelenecek Dosyalar</string>
+    <string name="select_directory_button">Dizin Seç</string>
+
+    <string-array name="algorithms">
+        <item>AES</item>
+        <item>Twofish</item>
+        <item>Serpent</item>
+    </string-array>
+
+    <string-array name="rijndael_bitlength">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+
+    <string-array name="twofish_bitlength">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+
+    <string-array name="serpent_bitlength">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+
+    <!-- Metin şifreleme -->
+    <string name="title_activity_text_encryption">Metin Şifreleme</string>
+    <string name="enter_text_text_view">Şifrelenecek Metni Giriniz</string>
+    <string name="text_encryption_options_button">Ayarlar</string>
+    <string name="encrypt_text_button">Şifrele</string>
+
+    <!-- Aktivite Başlıkları -->
+    <string name="title_activity_encryption_progression">Şifreleniyor</string>
+    <string name="title_activity_photo_encryption">Fotoğraf Şifreleme</string>
+    <string name="title_activity_about_app">Hakkında</string>
+    <string name="title_activity_show_encrypted_files">Şifreli Dosyaları Listele</string>
+    <string name="title_activity_preferences">Seçenekler</string>
+    <string name="title_activity_video_encryption">Video Şifreleme</string>
+</resources>

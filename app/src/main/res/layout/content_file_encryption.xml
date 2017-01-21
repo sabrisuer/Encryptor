@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".encryption_activities.FileEncryptionActivity"
+    tools:showIn="@layout/activity_file_encryption"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/jumpToChooseFileButton"
+        android:text="@string/select_file_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="chooseFile"/>
+
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jumpToChooseFileButton">
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
+    </HorizontalScrollView>
+
+
+    <Button
+        android:id="@+id/options_button"
+        android:text="@string/file_encryption_options_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontalScrollView"
+        android:onClick="expandContractOptions"/>
+
+    <LinearLayout
+        android:id="@+id/options_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/options_button"
+        android:orientation="vertical"
+        android:background="@drawable/optionslayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/algorithm_spinner"
+                android:layout_weight=".5"/>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/keylength_spinner"
+                android:layout_weight=".5"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key"/>
+
+
+        <RadioGroup
+            android:id="@+id/key_option_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_key"
+                android:id="@+id/radioButton"
+                android:layout_weight=".3"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_used_key"
+                android:id="@+id/radioButton2"
+                android:layout_weight=".3"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_key"
+                android:id="@+id/radioButton3"
+                android:layout_weight=".3"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/new_key_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/new_key_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/new_key"
+                android:inputType="textPassword"/>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/new_filename_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Yeni Dosya İsmi(Çoklu dosyalarda sonuna sayı eklenir)"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:imeOptions="actionNext"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:text="@string/select_file_save_location_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="chooseDirectory"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dirTextView"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/encrypt_files_button"
+        android:text="@string/encrypt_file_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options_layout"
+        android:textStyle="bold"
+        android:onClick="encryptFiles"/>
+</RelativeLayout>
